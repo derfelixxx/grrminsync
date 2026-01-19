@@ -1,7 +1,7 @@
 # Grrmin Sync
 
 > [!CAUTION]
-> **Disclaimer**: This web app is not production-ready. This is meant to run privately in your home network. Please use it at your own risk.
+> **Disclaimer**: This web app is meant to run privately in your home network. Please use it at your own risk.
 
 A simple tool to sync body composition data (Weight, Fat %, Muscle Mass, etc.) from Withings to Garmin Connect.
 
