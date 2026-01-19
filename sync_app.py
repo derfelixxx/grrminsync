@@ -111,10 +111,10 @@ def get_withings_credentials():
     try:
         code_input = input("Enter the code from the callback URL: ").strip()
     except EOFError:
-        print("\n[ERROR] Cannot read input (running in headless/docker mode?)")
-        print("Your credentials have expired or are invalid.")
-        print("Please run 'python sync_app.py' MANUALLY on your local machine to re-authenticate.")
-        print("Then copy the updated 'withings_tokens.pkl' to your server/container volume.")
+        print("\n[ERROR] Authentication required.")
+        print("Required credentials missing or invalid.")
+        print("Please visit the Web UI (Credentials section) to authorize the application.")
+        print("If running in Docker, ensure port 5000 is mapped and accessible.")
         raise
     
     # Allow user to paste the full URL
@@ -328,11 +328,11 @@ def main():
     print("Welcome to the Withings to Garmin Sync Tool!")
     
     if not config.WITHINGS_CLIENT_ID or not config.WITHINGS_CLIENT_SECRET:
-        print("Error: Withings Credentials not found. Please set them in .env file OR via Environment Variables (WITHINGS_CLIENT_ID, WITHINGS_CLIENT_SECRET).")
+        print("Error: Withings Credentials not found. Please configure your Withings credentials.")
         return
         
     if not config.GARMIN_EMAIL or not config.GARMIN_PASSWORD:
-        print("Error: Garmin Credentials not found. Please set them in .env file OR via Environment Variables (GARMIN_EMAIL, GARMIN_PASSWORD).")
+        print("Error: Garmin Credentials not found. Please configure your Garmin credentials.")
         return
 
     # 2. Authenticate Withings
