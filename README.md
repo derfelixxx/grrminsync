@@ -1,13 +1,13 @@
-# Withings to Garmin Body Composition Import
+# Grrmin Sync
 
 > [!CAUTION]
-> **Disclaimer**: This setup is not production-ready. This is meant to run privately in your home network. Please use it at your own risk.
+> **Disclaimer**: This web app is not production-ready. This is meant to run privately in your home network. Please use it at your own risk.
 
 A simple tool to sync body composition data (Weight, Fat %, Muscle Mass, etc.) from Withings to Garmin Connect.
 
 <p align="center">
-  <img src="screenshots/screenshot_mobile_1.png" width="18%" />
   <img src="screenshots/screenshot_mobile_2.png" width="18%" />
+  <img src="screenshots/screenshot_mobile_1.png" width="18%" />
   <img src="screenshots/screenshot_mobile_3.png" width="18%" />
   <img src="screenshots/screenshot_mobile_4.png" width="18%" />
   <img src="screenshots/screenshot_mobile_5.png" width="18%" />
@@ -27,14 +27,14 @@ Create a file named `docker-compose.yml` in a new folder and paste the following
 
 ```yaml
 services:
-  garmin-sync:
-    image: ghcr.io/kilooo/garminsync:latest
-    container_name: garmin-sync
+  grrmin-sync:
+    image: ghcr.io/kilooo/grrminsync:latest
+    container_name: grrmin-sync
     ports:
       - "5000:5000"
     volumes:
       # /app/data contains: 
-      # 1. garmin_import.db (Sync History)
+      # 1. grrmin_import.db (Sync History)
       # 2. credentials.json (Your Keys)
       # 3. withings_tokens.pkl (Session Tokens)
       - ./data:/app/data
@@ -73,8 +73,8 @@ You will need to configure your credentials in the Web UI.
 2.  Log in with your Withings account.
 3.  Click **Add an app**.
 4.  Fill in the details:
-    -   **App Name**: `Garmin Sync` (or any name you prefer)
-    -   **Description**: `Sync weight to Garmin`
+    -   **App Name**: `Grrmin Sync` (or any name you prefer)
+    -   **Description**: `Sync body composition data to Garmin Connect`
     -   **Contact Email**: Your email
     -   **Callback URL**: `http://localhost:5000/auth/withings/callback`
         > **Important**: If you are hosting this on a different server (not localhost), replace `localhost` with your server's IP address or domain name.
