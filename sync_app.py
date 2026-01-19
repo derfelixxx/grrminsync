@@ -111,10 +111,10 @@ def get_withings_credentials():
     try:
         code_input = input("Enter the code from the callback URL: ").strip()
     except EOFError:
-        print("\n[ERROR] Cannot read input (running in headless/docker mode?)")
-        print("Your credentials have expired or are invalid.")
-        print("Please run 'python sync_app.py' MANUALLY on your local machine to re-authenticate.")
-        print("Then copy the updated 'withings_tokens.pkl' to your server/container volume.")
+        print("\n[ERROR] Authentication required.")
+        print("Required credentials missing or invalid.")
+        print("Please visit the Web UI (Credentials section) to authorize the application.")
+        print("If running in Docker, ensure port 5000 is mapped and accessible.")
         raise
     
     # Allow user to paste the full URL
