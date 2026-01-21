@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/kilooo/grrminsync/compare/v1.0.0...v1.1.0) (2026-01-21)
+
+
+### Features
+
+* Implement manual body metric entry page with direct Garmin Connect synchronization. ([197222c](https://github.com/kilooo/grrminsync/commit/197222c8e295bb77ce7aa0a75895e253a41f793e))
+
 # 1.0.0 (2026-01-19)
 
 
