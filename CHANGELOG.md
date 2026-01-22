@@ -1,3 +1,11 @@
+# [1.2.0](https://github.com/kilooo/grrminsync/compare/v1.1.0...v1.2.0) (2026-01-22)
+
+
+### Features
+
+* Add recent sync history on home page to show last 3 sync status. ([693b4d6](https://github.com/kilooo/grrminsync/commit/693b4d616952268aefc33bd02133a89cb44f2b1f))
+* Implement manual body metric entry page with direct Garmin Connect synchronization. ([7838b50](https://github.com/kilooo/grrminsync/commit/7838b50b6c02590c239ea3d77bf232353ba42036))
+
 # [1.1.0](https://github.com/kilooo/grrminsync/compare/v1.0.0...v1.1.0) (2026-01-21)
 
 
