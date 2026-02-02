@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/kilooo/grrminsync/compare/v1.2.1...v1.3.0) (2026-02-02)
+
+
+### Features
+
+* Added Garmin Connect 2FA support ([d2d936f](https://github.com/kilooo/grrminsync/commit/d2d936f2b4aa2356f777375bfb1902df26af73a3))
+
 ## [1.2.1](https://github.com/kilooo/grrminsync/compare/v1.2.0...v1.2.1) (2026-01-23)
 
 
